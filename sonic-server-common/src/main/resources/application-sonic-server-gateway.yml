@@ -43,20 +43,20 @@ spring:
           filters:
             - StripPrefix=1
 
-        - id: dev-controller
-          uri: lb://sonic-server-controller
-          predicates:
-            - Path=/server/api/controller/**, /server/api/transport/**
-          filters:
-            - StripPrefix=3
-        - id: dev-folder
-          uri: lb://sonic-server-folder
-          predicates: Path=/server/api/folder/**
-          filters:
-            - StripPrefix=3
-        - id: dev-transport
-          uri: lb:ws://sonic-server-controller
-          predicates:
-            - Path=/server/websockets/**
-          filters:
-            - StripPrefix=2
+#        - id: dev-controller
+#          uri: lb://sonic-server-controller
+#          predicates:
+#            - Path=/server/api/controller/**, /server/api/transport/**
+#          filters:
+#            - StripPrefix=3
+#        - id: dev-folder
+#          uri: lb://sonic-server-folder
+#          predicates: Path=/server/api/folder/**
+#          filters:
+#            - StripPrefix=3
+#        - id: dev-transport
+#          uri: lb:ws://sonic-server-controller
+#          predicates:
+#            - Path=/server/websockets/**
+#          filters:
+#            - StripPrefix=2
